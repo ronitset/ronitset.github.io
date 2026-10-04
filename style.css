@@ -1,0 +1,744 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #050806;
+    color: #f2f5f3;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+body::before {
+    content: "";
+    position: fixed;
+
+    width: 650px;
+    height: 650px;
+
+    top: 150px;
+    right: -300px;
+
+    background: rgba(50, 130, 85, 0.08);
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    width: 100%;
+
+    padding: 30px 6vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 16px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #6faf8a;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 12px 20px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(120, 180, 145, 0.20);
+
+    background: rgba(20, 55, 40, 0.25);
+
+    color: #f2f5f3;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: rgba(80, 150, 110, 0.18);
+
+    border-color: rgba(120, 180, 145, 0.45);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SET CONCEPT
+========================================================= */
+
+.set-concept {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 55px;
+
+    color: #8b9991;
+
+    font-size: 13px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+.set-letter {
+    color: #6faf8a;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    max-width: 1200px;
+    margin: 90px auto 0;
+    padding: 0 40px;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    column-gap: 90px;
+    row-gap: 35px;
+    align-items: center;
+}
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.hero-profile {
+    text-align: center;
+}
+
+.profile-image {
+    width: 330px;
+    height: 330px;
+
+    margin: 0 auto 25px;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(120, 180, 145, 0.18);
+
+    background: #10261b;
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.35);
+
+    transition: 0.4s ease;
+}
+
+.profile-image:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(120, 180, 145, 0.35);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.hero-profile h1 {
+    font-size: 30px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+}
+
+.role {
+    color: #6faf8a;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.hero-content h2 {
+    font-size: clamp(50px, 5.5vw, 78px);
+    line-height: 0.98;
+    letter-spacing: -4px;
+    font-weight: 600;
+    max-width: 850px;
+    white-space: normal;
+}
+
+.hero-content h2 span {
+    color: #6faf8a;
+}
+
+
+/* =========================================================
+   DESCRIPTION GLASS BOX
+========================================================= */
+
+.description-box {
+    grid-column: 1 / -1;
+
+
+    margin-top: 30px;
+
+    padding: 50px;
+
+    max-width: 800px;
+    width: 100%;
+    justify-self: center;
+
+    border-radius: 20px;
+
+    background: linear-gradient(135deg,
+            rgba(35, 75, 55, 0.30),
+            rgba(10, 25, 18, 0.20));
+
+    border: 1px solid rgba(120, 180, 145, 0.14);
+
+    backdrop-filter: blur(18px);
+
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.025),
+        0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+.description-box p {
+    color: #a7b3ad;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SELECTED WORK
+========================================================= */
+
+.work-section {
+    max-width: 1200px;
+
+    margin: 170px auto 0;
+
+    padding:  40px;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading span {
+    display: block;
+
+    color: #6faf8a;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    font-size: clamp(38px, 5vw, 64px);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   WORK GRID
+========================================================= */
+
+.work-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================================================
+   WORK CARD
+========================================================= */
+
+.work-card {
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(120, 180, 145, 0.14);
+
+    background: rgba(8, 22, 15, 0.55);
+
+    transition: 0.4s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(120, 180, 145, 0.32);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   VIDEO PREVIEW
+========================================================= */
+
+.work-preview {
+    height: 270px;
+
+    margin: 9px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(135deg,
+            #123625,
+            #07130d);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.work-preview::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: rgba(100, 180, 130, 0.10);
+
+    filter: blur(45px);
+}
+
+.work-preview span {
+    position: relative;
+
+    color: rgba(170, 200, 185, 0.35);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   WORK INFO
+========================================================= */
+
+.work-info {
+    padding: 18px 18px 20px;
+}
+
+.work-info h3 {
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-bottom: 6px;
+}
+
+.work-info p {
+    color: #718078;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.contact-section {
+    min-height: 500px;
+
+    margin-top: 180px;
+
+    padding: 100px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.contact-label {
+    color: #6faf8a;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.contact-section h2 {
+    max-width: 800px;
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    line-height: 0.95;
+
+    letter-spacing: -5px;
+
+    font-weight: 600;
+}
+
+.contact-section h2 span {
+    color: #6faf8a;
+}
+
+.work-btn {
+    margin-top: 40px;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    background: #6faf8a;
+
+    color: #061009;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.work-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 40px rgba(80, 160, 110, 0.25);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 30px 6vw;
+
+    border-top: 1px solid rgba(120, 180, 145, 0.08);
+
+    text-align: center;
+}
+
+footer p {
+    color: #56635c;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .hero-content h2 {
+        max-width: 700px;
+    }
+
+    .description-box {
+        text-align: left;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 22px 5vw;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .contact-btn {
+        padding: 10px 15px;
+
+        font-size: 12px;
+    }
+
+    .set-concept {
+        gap: 10px;
+
+        margin-top: 40px;
+
+        font-size: 10px;
+
+        letter-spacing: 1px;
+    }
+
+    .hero {
+        margin-top: 65px;
+
+        padding: 0 20px;
+    }
+
+    .profile-image {
+        width: 250px;
+        height: 320px;
+    }
+
+    .hero-profile h1 {
+        font-size: 19px;
+    }
+
+    .hero-content h2 {
+        font-size: 48px;
+
+        letter-spacing: -3px;
+    }
+
+    .description-box {
+        padding: 22px;
+
+        margin-top: 30px;
+    }
+
+    .description-box p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+    .work-section {
+        margin-top: 120px;
+
+        padding: 0 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 42px;
+    }
+
+    .work-preview {
+        height: 220px;
+    }
+
+    .contact-section {
+        margin-top: 120px;
+
+        min-height: 400px;
+
+        padding: 80px 20px;
+    }
+
+    .contact-section h2 {
+        font-size: 55px;
+
+        letter-spacing: -3px;
+    }
+
+   
+}
+
+/* ================================
+   SELECTED WORK — DESKTOP FIX
+================================ */
+
+.work-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 420px);
+    gap: 30px;
+    justify-content: center;
+    align-items: start;
+}
+
+.work-card {
+    width: 420px;
+}
+
+.work-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #07120d;
+}
+
+.work-video video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.work-info {
+    width: 100%;
+    padding: 16px 4px;
+}
+/* CONTACT */
+
+.main-contact-text {
+    display: block;
+    width: fit-content;
+    margin: 45px auto 0;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    transition: opacity 0.3s ease;
+}
+
+.main-contact-text:hover {
+    opacity: 0.7;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 22px;
+    border-radius: 30px;
+    background: #6faf8a;
+    color: #07120d;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
