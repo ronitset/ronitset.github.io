@@ -284,7 +284,7 @@ body::before {
 
     margin: 170px auto 0;
 
-    padding:  40px;
+    padding: 40px;
 }
 
 .section-heading {
@@ -655,7 +655,7 @@ footer p {
         letter-spacing: -3px;
     }
 
-   
+
 }
 
 /* ================================
@@ -701,6 +701,7 @@ footer p {
     width: 100%;
     padding: 16px 4px;
 }
+
 /* CONTACT */
 
 .main-contact-text {
@@ -742,6 +743,7 @@ footer p {
     transform: translateY(-2px);
     opacity: 0.9;
 }
+
 /* =========================================================
    FINAL MOBILE FIX
 ========================================================= */
@@ -811,13 +813,15 @@ footer p {
         line-height: 1.5;
     }
 }
+
 @media (max-width: 600px) {
 
     .profile-image {
         width: 250px;
         height: 250px;
-        border-radius: 50%;
+        margin: 0 auto 25px;
         overflow: hidden;
+        border-radius: 50%;
     }
 
     .profile-image img {
